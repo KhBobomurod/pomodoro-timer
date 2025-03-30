@@ -1,0 +1,128 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: "Poppins", sans-serif;
+  overflow: auto;
+}
+
+.pomodoro-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.pomodoro-timer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.tomato {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #ff6347 0%, #e63946 100%);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2),
+    -10px -10px 20px rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.tomato:hover {
+  transform: rotate(5deg);
+}
+
+.stem {
+  width: 25px;
+  height: 25px;
+  background-color: #2ecc71;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.timer-display {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  color: white;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.controls {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+button {
+  
+  padding: 12px 25px;
+  font-size: 1.2em;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+    -5px -5px 10px rgba(255, 255, 255, 0.5);
+  transition: transform 0.1s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .pomodoro-timer {
+    width: 250px;
+    height: 250px;
+  }
+
+  .timer-display {
+    font-size: 2.5em;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .pomodoro-timer {
+    width: 200px;
+    height: 200px;
+  }
+
+  .timer-display {
+    font-size: 2em;
+  }
+
+  button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
