@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oddiy Pomodoro Timer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pomodoro-container">
+        <div class="pomodoro-timer">
+            <div class="tomato">
+                <div class="stem"></div>
+            </div>
+            <div class="timer-display">
+                <span  id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn">Boshlash</button>
+            <button id="reset-btn">Tozalash</button>
+        </div>
+    </div>
+    <audio id="alarm" src="https://www.soundjay.com/buttons/beep-01a.mp3"></audio>
+    <audio id="tick" src="tick.mp3"></audio> <!-- Yangi "chiq chiq" ovozi uchun -->
+    <script src="script.js"></script>
+</body>
+</html>
+</html>
+
+<!-- https://www.soundjay.com/buttons/beep-01a.mp3 -->
